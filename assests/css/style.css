@@ -1,0 +1,160 @@
+:root {
+    --DarkBlue: rgb(43, 57, 69);
+    --VeryDarkBlue: rgb(32, 44, 55);
+    --VeryDarkerBlue: hsl(200, 15%, 8%);
+    --DarkGray: rgb(133, 133, 133);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%) ;
+}   
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--VeryLightGray);
+    color: var(--VeryDarkerBlue);
+    font-family: "Nunito Sans", "sans-serif";
+}
+
+.dark-mode {
+    background-color: var(--VeryDarkBlue);
+    color: var(--VeryLightGray);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.toggle {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.control {
+    display: flex;
+    align-items: center;
+    font: 20px;
+    padding: 18px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.control input {
+    outline: none;
+    border: none;  
+    width: 300px;
+    background: none;
+}
+
+.toggle {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+.dropdownMenu {
+    width: 200px;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.drop-options {
+    display: none;
+    position: absolute;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    background-color: var(--VeryLightGray);
+    padding: 15px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.drop-options p {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.show-options {
+    display: block;
+}
+
+.countries {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    gap: 15px;
+}
+
+.country {
+    width: 300px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.countries-img {
+    width: 300px;
+}
+
+.countries-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.countries-details {
+    justify-content: center;
+    padding: 20px 25px;
+}
+
+.countries-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.countries-details strong {
+    margin-right: 5px;
+}
+
+
+@media  screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+    h1 {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .toggle {
+        cursor: pointer;
+        font-size: 16px;
+    }
+}
